@@ -1,5 +1,5 @@
 # OpenGoodreadsFromRomanceIo
-Add a button to open Goodreads search results from a RomanceIo book page
+Add a button to open www.goodreads.com search results from a www.romance.io book page
 
 # Instructions
 - Install Tampermonkey extension depending on your web brower
