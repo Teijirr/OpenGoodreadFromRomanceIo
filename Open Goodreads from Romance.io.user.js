@@ -47,12 +47,21 @@ function autoOpenGoodreadsBookIfOnlyResult() {
         const fromRomanceIo = urlParams.get('fromRomanceIo') === 'true';
         if(fromRomanceIo)
         {
-            const results = document.querySelector('tbody');
+            // For classic website
+            let results = document.querySelector('tbody');
+            // For mobile website
+            if(results === null) {
+                results = document.querySelector('.searchResults');
+            }
             const resultCount = results.childElementCount;
             if(resultCount === 1) {
                 const result = results.firstElementChild;
-                const titlea = result.querySelector('.bookTitle');
-                window.open(titlea.href, '_self');
+                const linkTitle = result.querySelector('.bookTitle');
+                let url = linkTitle.href;
+                if(url === undefined) {
+                    url = linkTitle.firstElementChild.href;
+                }
+                window.open(url, '_self');
             }
         }
     }
