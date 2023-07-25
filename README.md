@@ -1,4 +1,4 @@
-# OpenGoodreadFromRomanceIo
+# OpenGoodreadsFromRomanceIo
 Add a button to open Goodreads search results from a RomanceIo book page
 
 # Instructions
